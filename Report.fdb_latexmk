@@ -1,17 +1,18 @@
 # Fdb version 4
-["biber Report"] 1739895396.5074 "Report.bcf" "Report.bbl" "Report" 1739895398.52762 0
-  "Library.bib" 1739895374.32374 42615 2565609a1c6b2634d90b994b95ed0dca ""
-  "Report.bcf" 1739895398.49095 107778 112b9301f11601f999f3a71ac735d7db "pdflatex"
+["biber Report"] 1739896489.59387 "Report.bcf" "Report.bbl" "Report" 1739896491.7371 0
+  "Library.bib" 1739896462.69099 43734 00c4158661c98bbfb2ca0b1d92589764 ""
+  "Report.bcf" 1739896491.67712 107936 252ca621c0249cc3e7eec2fc5f8f1e5f "pdflatex"
   (generated)
   "Report.bbl"
   "Report.blg"
   (rewritten before read)
-["pdflatex"] 1739895398.01318 "/home/joar/Documents/PJ6100-peak/Report.tex" "Report.pdf" "Report" 1739895398.5278 0
-  "/home/joar/Documents/PJ6100-peak/Report.tex" 1739895395.65903 3707 f3a9cd4f19407a62ab8afa4ab26fefcc ""
+["pdflatex"] 1739896491.1409 "/home/joar/Documents/PJ6100-peak/Report.tex" "Report.pdf" "Report" 1739896491.73732 0
+  "/home/joar/Documents/PJ6100-peak/Report.tex" 1739896488.81205 3771 0eccf720cdc296512532f073cba2116b ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1736268207 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1736268207 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1736268207 1536 02c06700a42be0f5a28664c7273f82e7 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1736268207 1324 c910af8c371558dc20f2d7822f66fe64 ""
+  "/usr/share/texmf-dist/fonts/tfm/public/cm/cmcsc10.tfm" 1736268207 1300 63a6111ee6274895728663cf4b4e7e81 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1736268207 1524 4414a8315f39513458b80dfc63bff03a ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm" 1736268207 1512 f21f83efb36853c0b70002322c1ab3ad ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm" 1736268207 1520 eccf95517727cb11801f4f1aee3a21b4 ""
@@ -26,6 +27,7 @@
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmti12.tfm" 1736268207 1484 ed72f8f5cf654cda15ecc8e32bfcbee5 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmtt12.tfm" 1736268207 772 9a936b7f5e2ff0557fce0f62822f0bbf ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1736268207 32080 340ef9bf63678554ee606688e7b5339d ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb" 1736268207 32001 6aeea3afe875097b1eb0da29acd61e28 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1736268207 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1736268207 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb" 1736268207 36118 fad905eba93cff5bce1e185fe980a177 ""
@@ -182,12 +184,12 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1736268207 41588 b43d3e860a4f94167ee1e725ff526a72 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1736385653.56601 5318467 8236939515598d005dfbcc2e1a40f206 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1736385646 7113022 0e3b556cb559c892beb7017afe3f3634 ""
-  "Report.aux" 1739895398.4899 882 1e0245592172d1d9d021b6d2d0e1d19d "pdflatex"
-  "Report.bbl" 1739895396.90827 1551 9b6b6613f3ef546c53d6c34052ade50e "biber Report"
-  "Report.out" 1739895398.49027 398 d483e528c00a4fe3ac906fac6ece6d6d "pdflatex"
-  "Report.run.xml" 1739895398.49151 2316 8d7d9411c1fbade0916415c590e8f121 "pdflatex"
-  "Report.tex" 1739895395.65903 3707 f3a9cd4f19407a62ab8afa4ab26fefcc ""
-  "Report.toc" 1739895398.49151 272 7e0fc7183d9e6c32bb36e39c99001a56 "pdflatex"
+  "Report.aux" 1739896491.67612 1226 58e4c66cbfc5021f78dbd6e3a087491c "pdflatex"
+  "Report.bbl" 1739896490.06094 4163 ce0922239142e29bb94a389c8f58aade "biber Report"
+  "Report.out" 1739896491.67612 398 d483e528c00a4fe3ac906fac6ece6d6d "pdflatex"
+  "Report.run.xml" 1739896491.6778 2316 8d7d9411c1fbade0916415c590e8f121 "pdflatex"
+  "Report.tex" 1739896488.81205 3771 0eccf720cdc296512532f073cba2116b ""
+  "Report.toc" 1739896491.6778 272 7e0fc7183d9e6c32bb36e39c99001a56 "pdflatex"
   "timing-diagrams.sty" 1739890531.35511 7405 6ef335de3f7846990cbf642444919ab6 ""
   (generated)
   "Report.aux"

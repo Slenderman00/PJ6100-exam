@@ -39,6 +39,72 @@
       \field{labeltitlesource}{title}
       \field{title}{Preprint {{PEAK Proxy Eliminating Architecture}} Using {{Kubernetes}}: {{Leveraging Proven Technologies}} to {{Create}} the {{Distributed System}} of the {{Future}}}
     \endentry
+    \entry{holdregeIPNetworkAddress1999}{report}{}
+      \name{author}{2}{}{%
+        {{hash=e0d2066c8d11106a837e64765756adfc}{%
+           family={Holdrege},
+           familyi={H\bibinitperiod},
+           given={Matt},
+           giveni={M\bibinitperiod}}}%
+        {{hash=26c22827dfe69eb0a51075f886f22ec6}{%
+           family={Srisuresh},
+           familyi={S\bibinitperiod},
+           given={Pyda},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Internet Engineering Task Force}%
+      }
+      \strng{namehash}{80c10558afd0a3db343f1136c4ecfe73}
+      \strng{fullhash}{80c10558afd0a3db343f1136c4ecfe73}
+      \strng{bibnamehash}{80c10558afd0a3db343f1136c4ecfe73}
+      \strng{authorbibnamehash}{80c10558afd0a3db343f1136c4ecfe73}
+      \strng{authornamehash}{80c10558afd0a3db343f1136c4ecfe73}
+      \strng{authorfullhash}{80c10558afd0a3db343f1136c4ecfe73}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This document attempts to describe the operation of NAT devices and the associated considerations in general, and to define the terminology used to identify various flavors of NAT. This memo provides information for the Internet community.}
+      \field{month}{8}
+      \field{number}{RFC 2663}
+      \field{title}{{{IP Network Address Translator}} ({{NAT}}) {{Terminology}} and {{Considerations}}}
+      \field{type}{Request for {{Comments}}}
+      \field{urlday}{18}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{year}{1999}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.17487/RFC2663
+      \endverb
+      \verb{file}
+      \verb /home/joar/Zotero/storage/MKTNNVJE/Holdrege and Srisuresh - 1999 - IP Network Address Translator (NAT) Terminology an.pdf
+      \endverb
+    \endentry
+    \entry{InternetProtocol1981}{report}{}
+      \list{institution}{1}{%
+        {Internet Engineering Task Force}%
+      }
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labeltitlesource}{title}
+      \field{month}{9}
+      \field{number}{RFC 791}
+      \field{title}{Internet {{Protocol}}}
+      \field{type}{Request for {{Comments}}}
+      \field{urlday}{18}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{year}{1981}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.17487/RFC0791
+      \endverb
+      \verb{file}
+      \verb /home/joar/Zotero/storage/BMP42MIT/1981 - Internet Protocol.pdf
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
