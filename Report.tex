@@ -1,0 +1,105 @@
+% !TeX root = Report.tex
+\documentclass[12pt]{article}
+
+% Package imports (organized and deduplicated)
+\usepackage{biblatex}
+\usepackage{changepage}
+\usepackage{color}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{sectsty}
+\usepackage{xcolor}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{xurl}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric,positioning,fit,backgrounds}
+\usepackage{./timing-diagrams}
+\usetikzlibrary{calc}
+\setcounter{biburlnumpenalty}{100}
+\setcounter{biburlucpenalty}{100}
+\setcounter{biburllcpenalty}{100}
+
+\definecolor{darkblue}{RGB}{0, 0, 102} 
+\hypersetup{
+    colorlinks=true,
+    pdfborder={0 0 0},
+    linkbordercolor=white,
+    urlcolor=darkblue,
+    linkcolor=darkblue,
+    citecolor=darkblue,
+    filecolor=darkblue
+}
+
+% Make bibliography ragged right instead of justified
+\AtBeginDocument{
+  \renewcommand{\bibsetup}{\raggedright}
+}
+% Document configuration
+\restylefloat{table}
+\graphicspath{{./images/}}
+\addbibresource{Library.bib}
+\subsectionfont{\fontsize{12}{14}\selectfont}
+
+% Author information
+\author{
+    Joar Heimonen\\
+    \texttt{contact@joar.me}
+}
+
+% Title configuration
+\title{
+    \textbf{PEAK}\\[0.5em]
+    \large \textbf{P}roxy \textbf{E}liminating \textbf{A}rchitecture using \textbf{K}ubernetes\\[0.3em]
+    \large A research propsal
+}
+\date{\today}
+
+\newcommand{\license}{
+    \vspace{1em}
+    \noindent\small{© 2024 Joar Heimonen\\
+    This work is licensed under a \href{https://creativecommons.org/licenses/by-sa/4.0/}{Creative Commons Attribution-Sharealike 4.0 International License}.}
+    \vspace{1em}
+}
+
+\begin{document}
+\maketitle
+
+\pagebreak
+
+\tableofcontents
+
+\pagebreak
+
+
+\section{Part 1}
+\subsection{Introduction}
+With the adoption of IPv6 our networking landscape is about to change. Last year we proposed the architecture \textbf{PEAK} \cite{heimonenPreprintPEAKProxy} which leverages the new capabilities of IPv6
+to create distributed systems that are not reliant on proxies.
+Our last paper introduced a reference implementation of the PEAK architecture, while this is useful it does not allow us to benchmark and compare the performance of 
+the PEAK architecture to traditional systems.
+\\
+\\
+In this paper we propose a set of reference implementations of the PEAK architecture that will be benchmarked against a set of traditional systems.
+We will also propose a set of metrics that will be used to compare the performance of the systems.
+With the aim of showing that the PEAK architecture not only is viable but matches or exceeds the performance of traditional systems.
+
+\subsection{Background}
+Since the start of this century, the internet has grown from a small network of universities to a global network that connects billions of devices. Due to our limited
+address space provided by IPv4 we have not been able to give every device a unique address. This has led to the development of two technologies. Network address translation (NAT) and proxies.
+\\
+\\
+NAT allows for the creation of subnets that can be used to connect multiple devices to the internet through a single shared IP address. This is a great solution for small networks
+but leads to an increase in complexity as the network grows. In a subnet consisting of servers none of these servers can be reached from the internet without the use of a proxy.
+The proxy simply redirects traffic to the correct in the subnet based on arbitrary rules.
+\\
+\\
+While proxies works fine they introduce a single point of failure in distributed systems. If the proxy stops working, all the servers within the subnet become unreachable.
+
+
+
+\addcontentsline{toc}{section}{References}
+\printbibliography
+\license
+\end{document}
