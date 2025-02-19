@@ -14,6 +14,7 @@
 \usepackage[breaklinks=true]{hyperref}
 \usepackage{xurl}
 \usepackage{tikz}
+\usepackage{tabularx}
 \usetikzlibrary{shapes.geometric,positioning,fit,backgrounds}
 \usepackage{./timing-diagrams}
 \usetikzlibrary{calc}
@@ -75,7 +76,7 @@
 
 \section{Part 1}
 \subsection{Introduction}
-With the adoption of IPv6 our networking landscape is about to change. Last year we proposed the architecture \textbf{PEAK} \cite{heimonenPreprintPEAKProxy} which leverages the new capabilities of IPv6
+With the adoption of IPv6 \cite{hindenInternetProtocolVersion1998a} our networking landscape is about to change. Last year we proposed the architecture \textbf{PEAK} \cite{heimonenPreprintPEAKProxy} which leverages the new capabilities of IPv6
 to create distributed systems that are not reliant on proxies.
 Our last paper introduced a reference implementation of the PEAK architecture, while this is useful it does not allow us to benchmark and compare the performance of 
 the PEAK architecture to traditional systems.
@@ -96,6 +97,98 @@ The proxy simply redirects traffic to the correct in the subnet based on arbitra
 \\
 \\
 While proxies works fine they introduce a single point of failure in distributed systems. If the proxy stops working, all the servers within the subnet become unreachable.
+
+\section{Part 2}
+\subsection{Relevant Work}
+As mentioned in the PEAK article \cite{heimonenPreprintPEAKProxy} distributed systems with DNS for load balancing and routing is not a new concept.
+However, it has proven to be a challenge to find recent research on the topic.
+\\
+\\
+\textit{Table 1} shows the search terms we used and the results from these searches. As can be seen
+there is a lack of research on the topic. Our exclusion parameters were set to exclude any research older than 2020.
+We also excluded any research that did not mention DNS, load balancing or distributed systems in the abstract.
+
+\begin{table}[H]
+    \centering
+    \begin{tabularx}{\textwidth}{|l|X|c|c|c|}
+        \hline
+        \textbf{DB} & \textbf{Keywords} & \textbf{Date} & \textbf{Res.} & \textbf{Rel.} \\
+        \hline
+        IEEE & Dist. Sys. AND DNS & 17-Feb-25 & 117 & 0 \\
+        \hline
+        IEEE & Load bal. AND DNS & 17-Feb-25 & 33 & 0 \\
+        \hline
+        IEEE & Dist. Sys. AND Load bal. AND DNS & 17-Feb-25 & 13 & 0 \\
+        \hline
+        Google Scholar* & CERN AND Load bal. AND DNS & 17-Feb-25 & 40 & 2 \\
+        \hline
+        ACM & Dist. Sys. AND DNS & 18-Feb-25 & 388 & 0 \\
+        \hline
+        ACM & Load bal. AND DNS & 18-Feb-25 & 161 & 0 \\
+        \hline
+        ACM & Dist. Sys. AND Load bal. AND DNS & 18-Feb-25 & 154 & 0 \\
+        \hline
+    \end{tabularx}
+    \caption{Search results \textit{*Google Scholar is a meta-database, The results are from the first four pages.}}
+\end{table}
+
+Due to the lack of search results we quickly realized that it would be beneficial to use a meta-database such as Google Scholar.
+This gave us two relevant articles from CERN.
+
+\newpage
+
+\noindent\rule{\textwidth}{0.4pt}
+\begin{itemize}
+    \item \textbf{Title:} Achieving metric oriented load balancing \cite{canilhoAchievingMetricOriented2020}
+    \item \textbf{Authors:} P. Canilho, I. Reguero, P. Saiz
+    \item \textbf{Date:} 2020
+    \item \textbf{Data:} "This article presented the objectives, advantages and usage of a metric-based load balancing solution that is actively maintained at CERN." \cite{canilhoAchievingMetricOriented2020}
+    \item \textbf{Methods:} Theoretical Paper
+    \item \textbf{Main Findings*:} Implemented metric-based load balancing through SNMP and their own lbclient. Does not mention how this can be applied to the larger IPv6 space.
+\end{itemize}
+\noindent\rule{\textwidth}{0.4pt}
+\begin{itemize}
+    \item \textbf{Title:} A Modernized Architecture for the Post Mortem System at CERN \cite{barthModernizedArchitecturePost2022}
+    \item \textbf{Authors:} J. Barth, F. Bogyai, J. Garnier, M. Majewski, T. Martins Riberio, A. Mnich, M. Pocwierz, R. Selvek, R. Simpsons, A. Stanisz, D. Wollmann, M. Zerlauth
+    \item \textbf{Date:} 2022
+    \item \textbf{Data:} Redesign of the post mortem system at the large hadron collider \cite{barthModernizedArchitecturePost2022}.
+    \item \textbf{Methods:} Theoretical Paper
+    \item \textbf{Main Findings*:} Implemented load balancing trough DNS to make the post mortem system of the large hadron collider horizontally scalable.
+\end{itemize}
+\noindent\rule{\textwidth}{0.4pt}
+\textbf{*Main findings in relation to the PEAK architecture \cite{heimonenPreprintPEAKProxy}.}
+
+\subsection{Initial Analysis}
+We were able to find two articles that address load balancing trough DNS and metric based load balancing \cite{heimonenPeakDNS2024}. 
+However, none of these articles mention the use of IPv6 to create a public distributed system that is not reliant on proxies.
+Neither of the articles perform any form of benchmarking to compare the performance of their systems to more traditional systems.
+
+\section{Part 3}
+\subsection{Research Questions}
+We aim to answer the following questions:
+\begin{enumerate}
+    \item How does the PEAK architecture perform compared to traditional systems?
+    \item What metrics can be used to compare the performance of the PEAK architecture to traditional systems?
+    \item How does the PEAK architecture scale compared to traditional systems?
+\end{enumerate}
+To achieve this goal this paper will propose a set of reference implementations of the PEAK architecture and a set of traditional counterparts.
+We will also propose a set of metrics that can be used to compare the performance of the systems.
+
+\subsection{Reference Implementations}
+We propose the following reference implementations:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{test-one.drawio.png}
+    \caption{PEAK reference implementation 1}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{test-one-traditional.drawio.png}
+    \caption{Reference implementation 1 traditional counterpart}
+\end{figure}
+
 
 
 
