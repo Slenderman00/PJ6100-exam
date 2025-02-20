@@ -76,15 +76,21 @@
 
 \section{Part 1}
 \subsection{Introduction}
-With the adoption of IPv6 \cite{hindenInternetProtocolVersion1998a} our networking landscape is about to change. Last year we proposed the architecture \textbf{PEAK} \cite{heimonenPreprintPEAKProxy} which leverages the new capabilities of IPv6
+With the adoption of IPv6 \cite{hindenInternetProtocolVersion1998a} our networking landscape is about to change. Last year we proposed the architecture \textbf{PEAK} \cite{heimonenPreprintPEAKProxy2024} which leverages the new capabilities of IPv6
 to create distributed systems that are not reliant on proxies.
 Our last paper introduced a reference implementation of the PEAK architecture, while this is useful it does not allow us to benchmark and compare the performance of 
 the PEAK architecture to traditional systems.
 \\
 \\
+While the PEAK article \cite{heimonenPreprintPEAKProxy2024} was a qualitative study, this paper proposes a quantitative study of the PEAK architecture.
+This quantitative study will be performed according to the guidelines set forth by "Research Design: Qualitative, Quantitative, and Mixed Methods Approaches" \cite{creswellResearchDesignQualitative}.
+We will However not be performing a Mixed Methods study as this all ready has been done in the PEAK article \cite{heimonenPreprintPEAKProxy2024}.
+\\
+\\
 In this paper we propose a set of reference implementations of the PEAK architecture that will be benchmarked against a set of traditional systems.
 We will also propose a set of metrics that will be used to compare the performance of the systems.
 With the aim of showing that the PEAK architecture not only is viable but matches or exceeds the performance of traditional systems.
+We hope that the data driven approach of this paper will help to further the adoption of the PEAK architecture.
 
 \subsection{Background}
 Since the start of this century, the internet has grown from a small network of universities to a global network that connects billions of devices. Due to our limited
@@ -100,7 +106,7 @@ While proxies works fine they introduce a single point of failure in distributed
 
 \section{Part 2}
 \subsection{Relevant Work}
-As mentioned in the PEAK article \cite{heimonenPreprintPEAKProxy} distributed systems with DNS for load balancing and routing is not a new concept.
+As mentioned in the PEAK article \cite{heimonenPreprintPEAKProxy2024} distributed systems with DNS for load balancing and routing is not a new concept.
 However, it has proven to be a challenge to find recent research on the topic.
 \\
 \\
@@ -156,12 +162,22 @@ This gave us two relevant articles from CERN.
     \item \textbf{Main Findings*:} Implemented load balancing trough DNS to make the post mortem system of the large hadron collider horizontally scalable.
 \end{itemize}
 \noindent\rule{\textwidth}{0.4pt}
-\textbf{*Main findings in relation to the PEAK architecture \cite{heimonenPreprintPEAKProxy}.}
+\textbf{*Main findings in relation to the PEAK architecture \cite{heimonenPreprintPEAKProxy2024}.}
 
 \subsection{Initial Analysis}
-We were able to find two articles that address routing trough DNS and metric based load balancing \cite{heimonenPreprintPEAKProxy,canilhoAchievingMetricOriented2020}. 
+We were able to find two articles that address routing trough DNS and metric based load balancing \cite{heimonenPreprintPEAKProxy2024,canilhoAchievingMetricOriented2020}. 
 However, none of these articles mention the use of IPv6 to create a public distributed system that is not reliant on proxies.
-Neither of the articles perform any form of benchmarking to compare the performance of their systems to more traditional systems.
+Neither of the articles perform any form of benchmarking to compare the performance of their systems to more traditional systems. 
+Due to the lack of research on this topic we believe that we have found a gap in research on the topic of modern distributed systems.
+While it is somewhat disconcerting that we were not able to find more research on the topic, we are 
+also presented with an exciting opportunity to further the field of distributed systems.
+This further demonstrates the need for a quantitative study of not only the PEAK architecture but also
+more conventional systems.
+\\
+\\
+As a system grows in complexity qualitative studies \cite{creswellResearchDesignQualitative} become more and more disconnected from the reality of the system.
+This is why we believe that a quantitative study is needed to further the field of distributed systems.
+
 
 \section{Part 3}
 \subsection{Research Questions}
@@ -198,7 +214,7 @@ A counterpart to this reference implementation consists of a proxy server that r
 \end{figure}
 
 \subsubsection{Reference Implementation 2}
-This reference implementation is designed to test the client-mediated communication suggested in the PEAK architecture \cite{heimonenPreprintPEAKProxy}.
+This reference implementation is designed to test the client-mediated communication suggested in the PEAK architecture \cite{heimonenPreprintPEAKProxy2024}.
 This can be seen in \textit{Figure \ref{fig:test-two}}.
 
 \begin{figure}[H]
@@ -233,14 +249,38 @@ Like the ratio between throughput and Scalability. In a perfect system we expect
 Latency and Scalability can also be combined to see how the latency increases as the number of servers increases. 
 
 \subsection{Methodology}
-The reference implementations will be implemented in a Kubernetes cluster. The cluster will contain a single cluster level DNS server \cite{heimonenPreprintPEAKProxy} or a single proxy server.
-We will ramp up Apache JMeter \cite{ApacheJMeterApache} until the system fails. After this we will increase the number of servers and repeat the test. 
+The reference implementations will be implemented in a Kubernetes cluster.
+The cluster will contain a single cluster level DNS server \cite{heimonenPreprintPEAKProxy2024} or a single proxy server.
+We will ramp up Apache JMeter \cite{ApacheJMeterApache} until the system fails. 
+After the system has failed we will increase the number of servers and try again.
 This will be done for both the PEAK architecture and the traditional systems.
-The results will be compared using the metrics proposed in the previous section.
+A flow diagram of the testing process can be seen in \textit{Figure \ref{fig:flow-chart}}.
+The results will be compared using the metrics proposed in the previous section through a comparative analysis.
+\\
+\\
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{flow chart.drawio.png}
+    \caption{A flow chart of the testing process. 
+    This test runs until the desired number of servers has been reached.}
+    \label{fig:flow-chart}
+\end{figure}
 
 \section{Part 4}
 \subsection{Discussion}
-
+While our approach to quantitative testing \cite{creswellResearchDesignQualitative} seems simple enough on paper.
+It is worth remembering that there are hundreds of configurations not only for the PEAK architecture but also for the traditional systems
+that can be tested. It is essential that both of the systems are created in an as efficient and lean way as possible.
+This helps to mitigate the risk of a system underperforming due to a misconfiguration.
+A potential solution to this problem is outsourcing the creation of the traditional systems to multiple parties.
+Multiple implementations of the traditional system created by different parties will strengthen the validity of the results
+by guaranteeing that the traditional systems are created in an impartial manner.
+\\
+\\
+Providing that the proposed quantitative study is performed correctly, we believe that this work 
+has the potential to disrupt the status quo of distributed systems. Resulting in less bloated
+systems that are more fault-tolerant and scalable. We also hope that this work will inspire others 
+to further the field of distributed systems with original ideas and architectures.
 
 
 

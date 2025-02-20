@@ -212,13 +212,49 @@
       \verb /home/joar/Zotero/storage/E8N4BYEA/Canilho et al. - 2020 - Achieving metric oriented load balancing.pdf
       \endverb
     \endentry
-    \entry{heimonenPreprintPEAKProxy}{misc}{}
+    \entry{creswellResearchDesignQualitative}{incollection}{}
+      \name{author}{2}{}{%
+        {{hash=edf81f0c97f04eb79c53fe2412e37141}{%
+           family={Creswell},
+           familyi={C\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+        {{hash=6edbc4cd1935adf0aa04cb641ec3dae9}{%
+           family={Creswell},
+           familyi={C\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Chapter One: The Selection of a Research Approach}%
+      }
+      \strng{namehash}{06ccf2e4c4c6acac3ab98e52d2bc34d5}
+      \strng{fullhash}{06ccf2e4c4c6acac3ab98e52d2bc34d5}
+      \strng{bibnamehash}{06ccf2e4c4c6acac3ab98e52d2bc34d5}
+      \strng{authorbibnamehash}{06ccf2e4c4c6acac3ab98e52d2bc34d5}
+      \strng{authornamehash}{06ccf2e4c4c6acac3ab98e52d2bc34d5}
+      \strng{authorfullhash}{06ccf2e4c4c6acac3ab98e52d2bc34d5}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Research {{Design}}: {{Qualitative}}, {{Quantitative}}, and {{Mixed Methods Approaches}}}
+      \field{title}{Research {{Design}}: {{Qualitative}}, {{Quantitative}}, and {{Mixed Methods Approaches}}}
+      \field{urlday}{20}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+    \endentry
+    \entry{heimonenPreprintPEAKProxy2024}{misc}{}
       \name{author}{1}{}{%
         {{hash=6d975a8d6337c5d78bbffcd5535d1dbb}{%
            family={Heimonen},
            familyi={H\bibinitperiod},
            given={Joar},
            giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {joar.me/blog\#peak}%
       }
       \strng{namehash}{6d975a8d6337c5d78bbffcd5535d1dbb}
       \strng{fullhash}{6d975a8d6337c5d78bbffcd5535d1dbb}
@@ -230,7 +266,14 @@
       \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{abstract}{The current paradigm of cloud computing heavily relies on proxies, which introduce single points of failure in systems meant to be dis- tributed. We propose a radical simplification of the current archi- tecture by leveraging the abundance of IPv6 addresses and utilizing modern purpose-built DNS servers to create a distributed system that is both more reliable and scales drastically better than the current cloud computing paradigm. The proposed system utilizes cluster-level DNS servers that dynamically manage service discoverability using Prometheus for monitoring. Service-to-service communication is han- dled through JSON Web Tokens, creating an intercommunication sys- tem that scales 1:1 with the number of users. The system achieves robust fault tolerance through native DNS client failover capabili- ties, leveraging the universal support for multiple record resolution and automatic retry behavior present in all modern DNS implemen- tations. This eliminates the need for custom failover logic while pro- viding battle-tested reliability mechanisms that operate transparently to applications. This paper describes the implementation of Peak, a proof-of-concept implementation of the proposed architecture.}
+      \field{eprinttype}{joar.me/blog\#peak}
       \field{title}{Preprint {{PEAK Proxy Eliminating Architecture}} Using {{Kubernetes}}: {{Leveraging Proven Technologies}} to {{Create}} the {{Distributed System}} of the {{Future}}}
+      \field{urlday}{18}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
     \endentry
     \entry{hindenInternetProtocolVersion1998a}{report}{}
       \name{author}{2}{}{%
