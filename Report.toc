@@ -7,4 +7,10 @@
 \contentsline {section}{\numberline {3}Part 3}{6}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Research Questions}{6}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Reference Implementations}{6}{subsection.3.2}%
-\contentsline {section}{References}{7}{figure.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Reference Implementation 1}{6}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Reference Implementation 2}{7}{subsubsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.3}Metrics}{9}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Methodology}{10}{subsection.3.4}%
+\contentsline {section}{\numberline {4}Part 4}{10}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Discussion}{10}{subsection.4.1}%
+\contentsline {section}{References}{10}{subsection.4.1}%

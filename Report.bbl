@@ -19,6 +19,20 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{ApacheJMeterApache}{misc}{}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{https://jmeter.apache.org/}
+      \field{title}{Apache {{JMeter}} - {{Apache JMeter}}™}
+      \field{urlday}{20}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /home/joar/Zotero/storage/BVDKFH8B/jmeter.apache.org.html
+      \endverb
+    \endentry
     \entry{barthModernizedArchitecturePost2022}{article}{}
       \name{author}{12}{}{%
         {{hash=069b9deac8a663f8fdb68c2907f4f776}{%
@@ -198,34 +212,6 @@
       \verb /home/joar/Zotero/storage/E8N4BYEA/Canilho et al. - 2020 - Achieving metric oriented load balancing.pdf
       \endverb
     \endentry
-    \entry{heimonenPeakDNS2024}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=6d975a8d6337c5d78bbffcd5535d1dbb}{%
-           family={Heimonen},
-           familyi={H\bibinitperiod},
-           given={Joar},
-           giveni={J\bibinitperiod}}}%
-      }
-      \strng{namehash}{6d975a8d6337c5d78bbffcd5535d1dbb}
-      \strng{fullhash}{6d975a8d6337c5d78bbffcd5535d1dbb}
-      \strng{bibnamehash}{6d975a8d6337c5d78bbffcd5535d1dbb}
-      \strng{authorbibnamehash}{6d975a8d6337c5d78bbffcd5535d1dbb}
-      \strng{authornamehash}{6d975a8d6337c5d78bbffcd5535d1dbb}
-      \strng{authorfullhash}{6d975a8d6337c5d78bbffcd5535d1dbb}
-      \field{extraname}{1}
-      \field{sortinit}{H}
-      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{A fork of GoodDNS developed to operate as a kubernetes gateway}
-      \field{month}{12}
-      \field{title}{{{PeakDNS}}}
-      \field{urlday}{11}
-      \field{urlmonth}{12}
-      \field{urlyear}{2024}
-      \field{year}{2024}
-      \field{urldateera}{ce}
-    \endentry
     \entry{heimonenPreprintPEAKProxy}{misc}{}
       \name{author}{1}{}{%
         {{hash=6d975a8d6337c5d78bbffcd5535d1dbb}{%
@@ -240,7 +226,6 @@
       \strng{authorbibnamehash}{6d975a8d6337c5d78bbffcd5535d1dbb}
       \strng{authornamehash}{6d975a8d6337c5d78bbffcd5535d1dbb}
       \strng{authorfullhash}{6d975a8d6337c5d78bbffcd5535d1dbb}
-      \field{extraname}{2}
       \field{sortinit}{H}
       \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
       \field{labelnamesource}{author}

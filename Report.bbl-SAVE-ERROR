@@ -19,6 +19,20 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{ApacheJMeterApache}{misc}{}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{https://jmeter.apache.org/}
+      \field{title}{Apache {{JMeter}} - {{Apache JMeter}}™}
+      \field{urlday}{20}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /home/joar/Zotero/storage/BVDKFH8B/jmeter.apache.org.html
+      \endverb
+    \endentry
     \entry{barthModernizedArchitecturePost2022}{article}{}
       \name{author}{12}{}{%
         {{hash=069b9deac8a663f8fdb68c2907f4f776}{%
@@ -217,6 +231,49 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Preprint {{PEAK Proxy Eliminating Architecture}} Using {{Kubernetes}}: {{Leveraging Proven Technologies}} to {{Create}} the {{Distributed System}} of the {{Future}}}
+    \endentry
+    \entry{hindenInternetProtocolVersion1998a}{report}{}
+      \name{author}{2}{}{%
+        {{hash=15731384c9322099ff99912c4a4277a0}{%
+           family={Hinden},
+           familyi={H\bibinitperiod},
+           given={Bob},
+           giveni={B\bibinitperiod}}}%
+        {{hash=ca230329284d4fb0ed5c9512b6f01ae7}{%
+           family={Deering},
+           familyi={D\bibinitperiod},
+           given={Steve\bibnamedelima E.},
+           giveni={S\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Internet Engineering Task Force}%
+      }
+      \strng{namehash}{93588a36ead44bc15a5bda5a358cecf6}
+      \strng{fullhash}{93588a36ead44bc15a5bda5a358cecf6}
+      \strng{bibnamehash}{93588a36ead44bc15a5bda5a358cecf6}
+      \strng{authorbibnamehash}{93588a36ead44bc15a5bda5a358cecf6}
+      \strng{authornamehash}{93588a36ead44bc15a5bda5a358cecf6}
+      \strng{authorfullhash}{93588a36ead44bc15a5bda5a358cecf6}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This document specifies version 6 of the Internet Protocol (IPv6), also sometimes referred to as IP Next Generation or IPng. [STANDARDS-TRACK]}
+      \field{month}{12}
+      \field{number}{RFC 2460}
+      \field{title}{Internet {{Protocol}}, {{Version}} 6 ({{IPv6}}) {{Specification}}}
+      \field{type}{Request for {{Comments}}}
+      \field{urlday}{19}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{year}{1998}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.17487/RFC2460
+      \endverb
+      \verb{file}
+      \verb /home/joar/Zotero/storage/3TNRC282/Hinden and Deering - 1998 - Internet Protocol, Version 6 (IPv6) Specification.pdf
+      \endverb
     \endentry
     \entry{holdregeIPNetworkAddress1999}{report}{}
       \name{author}{2}{}{%

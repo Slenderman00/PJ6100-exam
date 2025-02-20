@@ -59,7 +59,7 @@
 
 \newcommand{\license}{
     \vspace{1em}
-    \noindent\small{© 2024 Joar Heimonen\\
+    \noindent\small{© 2025 Joar Heimonen\\
     This work is licensed under a \href{https://creativecommons.org/licenses/by-sa/4.0/}{Creative Commons Attribution-Sharealike 4.0 International License}.}
     \vspace{1em}
 }
@@ -93,7 +93,7 @@ address space provided by IPv4 \cite{InternetProtocol1981} we have not been able
 \\
 NAT allows for the creation of subnets that can be used to connect multiple devices to the internet through a single shared IP address. This is a great solution for small networks
 but leads to an increase in complexity as the network grows. In a subnet consisting of servers none of these servers can be reached from the internet without the use of a proxy.
-The proxy simply redirects traffic to the correct in the subnet based on arbitrary rules.
+The proxy simply redirects traffic to the correct server in the subnet based on arbitrary rules.
 \\
 \\
 While proxies works fine they introduce a single point of failure in distributed systems. If the proxy stops working, all the servers within the subnet become unreachable.
@@ -106,7 +106,7 @@ However, it has proven to be a challenge to find recent research on the topic.
 \\
 \textit{Table 1} shows the search terms we used and the results from these searches. As can be seen
 there is a lack of research on the topic. Our exclusion parameters were set to exclude any research older than 2020.
-We also excluded any research that did not mention DNS, load balancing or distributed systems in the abstract.
+We also excluded any research that did not mention DNS, load balancing and distributed systems in the abstract.
 
 \begin{table}[H]
     \centering
@@ -159,7 +159,7 @@ This gave us two relevant articles from CERN.
 \textbf{*Main findings in relation to the PEAK architecture \cite{heimonenPreprintPEAKProxy}.}
 
 \subsection{Initial Analysis}
-We were able to find two articles that address load balancing trough DNS and metric based load balancing \cite{heimonenPeakDNS2024}. 
+We were able to find two articles that address routing trough DNS and metric based load balancing \cite{heimonenPreprintPEAKProxy,canilhoAchievingMetricOriented2020}. 
 However, none of these articles mention the use of IPv6 to create a public distributed system that is not reliant on proxies.
 Neither of the articles perform any form of benchmarking to compare the performance of their systems to more traditional systems.
 
@@ -175,19 +175,71 @@ To achieve this goal this paper will propose a set of reference implementations 
 We will also propose a set of metrics that can be used to compare the performance of the systems.
 
 \subsection{Reference Implementations}
-We propose the following reference implementations:
+We propose the following two reference implementations and their traditional counterparts:
+
+\subsubsection{Reference Implementation 1}
+This reference implementation consists of a set of servers where routing and load balancing is handled through the cluster level DNS server.
+This can be seen in \textit{Figure \ref{fig:test-one}}.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{test-one.drawio.png}
     \caption{PEAK reference implementation 1}
+    \label{fig:test-one}
 \end{figure}
+
+A counterpart to this reference implementation consists of a proxy server that routes traffic to the servers. This can be seen in \textit{Figure \ref{fig:test-one-traditional}}.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{test-one-traditional.drawio.png}
     \caption{Reference implementation 1 traditional counterpart}
+    \label{fig:test-one-traditional}
 \end{figure}
+
+\subsubsection{Reference Implementation 2}
+This reference implementation is designed to test the client-mediated communication suggested in the PEAK architecture \cite{heimonenPreprintPEAKProxy}.
+This can be seen in \textit{Figure \ref{fig:test-two}}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{test-two.drawio.png}
+    \caption{PEAK reference implementation 2. The green arrows represent request 1 and the red arrows represent request 2.
+    The A set of servers signs a token that must be presented to the B set of servers to be able to communicate.}
+    \label{fig:test-two}
+\end{figure}
+
+A counterpart to this reference implementation that replaces the client mediated communication with a service mesh can be seen in \textit{Figure \ref{fig:test-two-traditional}}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{test-two-traditional.drawio.png}
+    \caption{Reference implementation 2 traditional counterpart}
+    \label{fig:test-two-traditional}
+\end{figure}
+
+\subsection{Metrics}
+There are six metrics that we can use to compare the performance of the PEAK architecture to traditional systems:
+\begin{enumerate}
+    \item \textbf{Latency:} The time it takes for a request to be processed.
+    \item \textbf{Throughput:} The number of requests that can be processed in a given time frame.
+    \item \textbf{Scalability:} How well the system scales as the number of servers increases.
+    \item \textbf{Balance:} How well the system balances the load between the servers.
+    \item \textbf{Inner service communication:} How well the system handles communication between servers.
+    \item \textbf{Fault tolerance:} How well the system handles server failures.
+\end{enumerate}
+There are also several combinations of these metrics that can be used to compare the performance of the systems.
+Like the ratio between throughput and Scalability. In a perfect system we expect the throughput to increase linearly as the number of servers increases.
+Latency and Scalability can also be combined to see how the latency increases as the number of servers increases. 
+
+\subsection{Methodology}
+The reference implementations will be implemented in a Kubernetes cluster. The cluster will contain a single cluster level DNS server \cite{heimonenPreprintPEAKProxy} or a single proxy server.
+We will ramp up Apache JMeter \cite{ApacheJMeterApache} until the system fails. After this we will increase the number of servers and repeat the test. 
+This will be done for both the PEAK architecture and the traditional systems.
+The results will be compared using the metrics proposed in the previous section.
+
+\section{Part 4}
+\subsection{Discussion}
 
 
 
